@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, 0.1f);
+        transform.Translate(0, 0, 0.3f);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if (jump == true)
         {
             anim.SetBool("isJump", jump);
-            transform.Translate(0, 0.1f, 0.1f);
+            transform.Translate(0, 0.3f, 0.1f);
         }
         else if(jump == false)
         {
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         if (slide == true)
         {
             anim.SetBool("isSlide", slide);
-            transform.Translate(0, 0.1f, 0.1f);
+            transform.Translate(0, 0f, 0.1f);
         }
         else if (slide == false)
         {
