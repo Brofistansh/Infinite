@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenerateLevel : MonoBehaviour
 {
     public GameObject[] section;
-    public int zPos = 50;
+    public int zPos = 66;
     public bool creatingSection = false;
     public int secNum;
     void Update()
