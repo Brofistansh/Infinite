@@ -1,10 +1,12 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public bool jump = false;
+    public bool slide = false;
+
 
 
     public Animator anim;
@@ -28,15 +30,36 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = false;
         }
-        if(jump == true)
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            slide = true;
+        }
+        else
+        {
+            slide = false;
+        }
+        if (jump == true)
         {
             anim.SetBool("isJump", jump);
             transform.Translate(0, 0.1f, 0.1f);
         }
+        else if(jump == false)
+        {
+            anim.SetBool("isJump", jump);
+        }
+        if (slide == true)
+        {
+            anim.SetBool("isSlide", slide);
+            transform.Translate(0, 0.1f, 0.1f);
+        }
+        else if (slide == false)
+        {
+            anim.SetBool("isSlide", slide);
+        }
     }
 }
-*/
-using System.Collections;
+
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -73,4 +96,4 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
         anim.SetBool("isJump", false);
     }
-}
+}*/
